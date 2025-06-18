@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 
 export function middleware(req: NextRequest) {
-  console.log("🔒 middleware running for:", req.nextUrl.pathname);
   
   const session = req.cookies.get("session")?.value
   const path = req.nextUrl.pathname

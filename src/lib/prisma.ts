@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { PrismaClient } from '@/generated/prisma';
 import { neonConfig } from '@neondatabase/serverless'
 import { PrismaNeon } from '@prisma/adapter-neon'

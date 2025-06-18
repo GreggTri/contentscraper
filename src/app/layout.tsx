@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,16 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </head>
       <body className={`${inter.variable} font-sans antialiased min-h-screen bg-background`}>
           <div className="relative flex min-h-screen flex-col">
             <main className="flex-1">{children}</main>
           </div>
-          <Toaster />
       </body>
     </html>
   )

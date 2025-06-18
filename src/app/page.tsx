@@ -1,4 +1,7 @@
 "use client"
+if (typeof window === "undefined") {
+  console.log("SERVER RENDER", __filename);
+}
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
